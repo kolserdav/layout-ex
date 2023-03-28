@@ -1,0 +1,90 @@
+$menu-width: 200px;
+
+.wrapper {
+  position: relative;
+
+  .app_bar {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 1320px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu_icon {
+        position: relative;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .section_form {
+    position: relative;
+    background-color: #deca97;
+    // FIXME
+    height: 100vh;
+    width: 100%;
+  }
+
+  .menu {
+    position: fixed;
+    z-index: 12;
+    width: $menu-width;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    left: calc($menu-width * -1);
+    top: 0;
+    transition: left 0.3s ease-in;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+
+    &.open {
+      left: 0;
+      transition: left 0.3s ease-out;
+    }
+
+    .close_button {
+      position: relative;
+      background-color: inherit;
+      width: 24px;
+      width: 24px;
+      margin: 20px 20px 0 auto;
+    }
+
+    .links {
+      position: relative;
+      list-style-type: none;
+
+      padding-inline-start: 0;
+
+      li {
+        position: relative;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.25rem;
+        display: block;
+        text-align: center;
+
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 8px 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
