@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import s from "./App.module.scss";
 import Logo from "./images/default-logo.png";
 import CloseIcon from "./icons/Close";
+import PhoneIcon from "./icons/Phone";
+import PointIcon from "./icons/Point";
+import LetterIcon from "./icons/Letter";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,7 +65,21 @@ function App() {
           </div>
         </div>
       </header>
-      <section className={s.section_form}> </section>
+      <section className={s.section_form}>
+        <div className={s.container}>
+          <div className={s.item}>
+            <h2>Meet us</h2>
+            <div className={s.contact_name}>
+              <PhoneIcon />
+              <h4>Phone</h4>
+            </div>
+          </div>
+          <div className={`${s.item} ${s.image}`} />
+          <div className={s.item}>
+            <h2>Get in Touch</h2>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Montserrat Bold;
+  src: url("./fonts/Montserrat/Montserrat-VariableFont_Bold_wght.ttf");
+}
+
 $menu-width: 200px;
 
 .wrapper {
@@ -32,10 +42,56 @@ $menu-width: 200px;
 
   .section_form {
     position: relative;
-    background-color: #deca97;
     // FIXME
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1140px;
+      display: flex;
+      flex-direction: row;
+
+      .item {
+        position: relative;
+        padding: 30px;
+        flex: 1 1 0px;
+        &.image {
+          min-height: 513px;
+          background-image: url("./images/black-white-exterior-building.jpg");
+          object-fit: cover;
+          background-position: 50% 50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        h2 {
+          font-family: Montserrat, sans-serif !important;
+          font-weight: 400;
+          font-size: 2.25rem;
+          line-height: 1.1;
+        }
+
+        .contact_name {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+
+          h4 {
+            font-family: Montserrat Bold, sans-serif !important;
+            font-size: 1.25rem;
+            margin-left: 49px;
+          }
+        }
+      }
+    }
   }
 
   .menu {
